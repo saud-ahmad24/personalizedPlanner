@@ -1,0 +1,14 @@
+<div class="spaces">
+  <div class="form-input">
+    <form action="/spaces-item?_method=PUT" method="post">
+        <input type="hidden" name="_id" value="<%= spaceitem._id %>">
+        <p style="color: aliceblue;">Task</p>
+        <input type="text" name="todo" id="todo" value="<%= spaceitem.todo %>" autocomplete="off"  required autofocus/><br><br>
+        <p style="color: aliceblue;">Desription</p>
+        <textarea  name="desc" id="desc" rows="10" cols="50" required><%= spaceitem.desc %></textarea><br><br>
+
+        <button type="submit"><i class="fa-solid fa-pen-to-square"></i>Submit</button><a href="/spaces">Cancel</a>
+      </form>
+      
+    </div>
+</div>

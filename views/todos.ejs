@@ -1,0 +1,43 @@
+<div class="spaces">
+    <center>
+    <div class="card" id="wrapper">
+        <h5 class="card-header" style="text-align: center; margin-bottom: 5px;font-size:30px;color: aliceblue;">Todos (<%=todos.length%>)</h5>
+        <div class="card-body">
+            <form>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter todo here" required>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary submit" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form><br>
+            <div class="scroll">
+            <table class="table table-striped" id="todos">
+                <tbody>
+                    <% todos.forEach((item) => { %>
+                    <tr>
+                        <td>
+                            <% if (!item.check) { %>
+                            <input type="checkbox" data-id="<%= item._id %>">
+                            <% } else { %>
+                            <input type="checkbox" data-id="<%= item._id %>" checked>
+                            <% } %>
+                            <span id="todo-item"><%= item.todo %></span>
+                            
+                            <button class="btn btn-success edit" data-id="<%= item._id %>" style="background-color:rgb(83, 172, 123);border-radius: 8px;border: solid rgb(136, 93, 93) 1px;">Update</i></button>
+                            <button class="btn btn-danger remove" data-id="<%= item._id %>" style="background-color:rgb(243, 64, 64) ;border-radius: 8px;border: solid rgb(136, 93, 93) 1px;">Delete</button>
+                       
+                            
+                            
+                        </td>
+                    </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+           </div>
+        </div>
+    </div>
+</center>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
+</div>

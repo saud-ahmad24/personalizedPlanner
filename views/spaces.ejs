@@ -1,0 +1,29 @@
+
+        <div class="spaces">
+            <div class="spaces-name">
+                <% if (space.length !== 0) { %>
+                    <% space.forEach((space) => { %>
+                  <% if (space.todo !== null) { %>
+                     <section class="catogary"><a href="/spaces/<%= space._id %>"><%= space._id %></a></section>
+                <% }  %>
+
+                <% }) %>
+                <% } else { %>
+                    <section class="catogary">no spaces</a></section><br>
+                <% } %> 
+                <section class="catogary" style="background-color: rgb(112, 99, 99);"><a href="/spaces/add-spaces">Add Spaces</a></section>
+                <section class="catogary" style="background-color: rgb(180, 26, 26);"><a href="/spaces/manage-spaces">Remove Spaces</a></section>
+
+                
+
+
+            </div><br>
+            <center>
+            <div class="spaces-list">
+                <img src="./img/desk.jpg" alt="dd" height="450px" width="500px">
+            </div>
+        </center>
+                
+            
+        </div>
+

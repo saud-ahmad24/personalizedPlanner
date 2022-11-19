@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" href="/img/logo.png"/>
+
+  <!-- Font Awesome Icon -->
+  <script src="https://kit.fontawesome.com/c44eab4227.js" crossorigin="anonymous"></script>
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <title><%= title %></title>
+</head>
+<body style="background: url('/img/coffee-and-laptop.jpg');">
+  <div class="container border" >
+    <section class="section1">
+      <div ><img class="logo" src="/img/logo.png"></img></div>
+      <div class="app-name"> Personalize Planner</div>
+      <div class="l-l">
+          <div class="logout"><a href="/logout">Logout</a></div>
+          <div class="user"><%= (typeof username != "undefined" ? username : "") %></div>
+      </div>
+  </section><br>
+  <section class="section2">
+      <section class="side-bar">
+          <div class="menu">
+              <!-- <div class="link"><a href="/notes">Notes</a></div><br> -->
+              <div class="link"><a href="/todos">Todos</a></div><br>
+              <div class="link"><a href="/spaces">Spaces</a></div><br>
+              <div class="link"><a href="/events">Events</a></div><br>
+              <!-- <div class="float"><div class="contact"><a href="#">Contact Us</a></div><br></div> -->
+              
+  
+          </div>
+      </section>
+      <section class="right-bar">
+        <%- body %>
+      </section>
+  </section>
+     
+  </div>
+</body>
+</html>

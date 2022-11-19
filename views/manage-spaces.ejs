@@ -1,0 +1,43 @@
+<div class="spaces">
+    <center>
+    <div class="card" id="wrapper">
+         <h1 style="text-align: center; margin-bottom: 5px;font-size:30px;">Spaces</h1>
+        <div class="card-body">
+            
+            <div class="scroll">
+            <table class="table table-striped" id="todos">
+                <tbody>
+                    <% if (space.length !== 0) { %>
+                        <% space.forEach((space) => { %>
+                      <% if (space.todo !== null) { %>
+                    <tr>
+                        <td>
+                            
+                            <span id="todo-item"><%= space._id %></span>
+                            <div class="control" style="float: right;">
+                                
+                                <form action="/spaces?_method=DELETE" method="post">
+                                    <input type="hidden" name="_id" value="<%= space._id %>">
+                                    <button type="submit" onclick="return confirm('do you really want to delete?');">Delete</button>
+                                  </form>
+        
+                            </div>
+                            
+                            
+                        </td>
+                    </tr>
+                    <% }  %>
+
+<% }) %>
+<% } else { %>
+    
+    <section class="catogary" style="color: aliceblue;width: 100px;height: 30px;"><a href="/spaces">Back</a></section>
+<% } %>
+                </tbody>
+            </table>
+           </div>
+        </div>
+    </div>
+</center>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</div>

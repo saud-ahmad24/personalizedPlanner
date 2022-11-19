@@ -1,0 +1,59 @@
+<center>
+<div class="main-content" style="width: 50%;">
+   <center>
+      <div class="content">
+       <h1>Login Page</h1>
+       <form action="/login" method="post" onsubmit ="return verifyPassword()">
+         <p class="error"><%= (typeof error != "undefined" ? error : "") %></p>
+         <span id = "message" style="color:red"> </span> 
+
+          <div class="input-fields">
+             <input type="text" name="username" placeholder="Username" required><br>
+
+          </div>
+          <div class="input-fields">
+             <input type="password" name="password" placeholder="password" id="pswd" required><br>
+             <input type="checkbox" onclick="myFunction()">Show Password <br>
+
+
+          </div>
+
+          <div class="button-ls"><input type="submit" value="login"></div><br>
+       </form>
+       <p>Dont have accout,<a href="/register"> click here</a></p>
+       
+       
+       
+      </div></center>
+      <script>
+         function myFunction() {
+          var x = document.getElementById("pswd");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+           function verifyPassword() {  
+          var pw = document.getElementById("pswd").value;  
+          //check empty password field  
+          if(pw == "") {  
+             document.getElementById("message").innerHTML = "Fill the password please!";  
+             return false;  
+          }  
+           
+         //minimum password length validation  
+          if(pw.length < 8) {  
+             document.getElementById("message").innerHTML = "Password length must be atleast 8 characters";  
+             return false;  
+          }  
+          
+        //maximum length of password validation  
+          if(pw.length > 9) {  
+             document.getElementById("message").innerHTML = "Password length must not exceed 8 characters";  
+             return false;  
+          } 
+        }  
+                </script>
+  </div>
+</center>

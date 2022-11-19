@@ -1,0 +1,17 @@
+<div class="spaces">
+    <div class="inputs">
+      <section>
+        <div class="form-input">
+          <h1 style="color: white;">Add Space</h1><br>
+         <p class="error"><%= (typeof error != "undefined" ? error : "") %></p>
+
+          <form action="/add-spaces" method="post">
+              <input type="text" name="spaces" required><br><br>
+              <input type="submit">
+              <a href="/spaces">back</a>
+          </form>
+        </div>
+
+      </section>
+    </div>
+  </div>

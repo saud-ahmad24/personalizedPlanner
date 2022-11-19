@@ -1,0 +1,18 @@
+<div class="spaces">
+  <div class="form-input">
+    <form action="/update-event?_method=PUT" method="post">
+        <input type="hidden" name="_id" value="<%= event._id %>">
+        <p style="color: aliceblue;">Event</p>
+        <input type="text" name="event" id="event" value="<%= event.event %>" autocomplete="off" required/><br><br>
+        <p style="color: aliceblue;">Desription</p>
+        <textarea name="desc" id="desc" rows="10" cols="50" required><%= event.desc %></textarea><br><br>
+        <p style="color: aliceblue;">Date</p>
+        <!-- <input type="date" name="date" id="date" value="<%= event.date %>"/> -->
+        <input type="text" name="date" id="date" value="<%= event.date %>" required/><br><br>
+
+        <button type="submit"><i class="fa-solid fa-pen-to-square"></i>&nbsp;Update</button><a href="/events">Cancel</a>
+      </form>
+      
+    </div>
+</div>
+

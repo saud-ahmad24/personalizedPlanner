@@ -1,0 +1,37 @@
+<div class="spaces">
+    <div class="float"><div class="add-task"><a href="/events/add-event">Add Event</a></div></div>
+    <div class="spaces-list scroll">
+        <% if (event.length !== 0) { %>
+            <% event.forEach((event) => { %>
+          <div class="spaces-item">
+            <div class="content">
+                
+              <p style="color: aliceblue;"> Event: </p> <%= event.event %><br>
+              <p style="color: aliceblue;"> Desc: </p> <%= event.desc %><br>
+              <p style="color: aliceblue;"> Date: </p> <%= event.date %><br>
+
+
+
+                
+            </div>
+            <div class="control">
+                <a href="/events/update-event/<%= event._id %>">Update</a><br><br>
+                <form action="/event?_method=DELETE" method="post">
+                    <input type="hidden" name="_id" value="<%= event._id %>">
+                    <button type="submit" onclick="return confirm('do you really want to delete?');">Delete</button>
+                  </form>
+
+            </div>
+        </div><br>
+
+        <% }) %>
+        <% } else { %>
+          <p style="color: aliceblue;text-align: center; margin-bottom: 5px;font-size:30px;">No events.</p>
+        <% } %> 
+        
+       
+        
+    </div>
+
+
+</div>

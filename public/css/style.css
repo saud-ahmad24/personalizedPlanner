@@ -1,0 +1,392 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-weight:bold; */
+  font-family:cursive;
+}
+
+
+.error{
+  color: red;
+}
+a{
+  text-decoration: none;
+}
+
+.border {
+  border-radius: 10px;
+  
+}
+.container{
+  display: block;
+  width: 98%;
+  margin: 5px auto;
+  padding: 1%;
+  /* background-color: rgb(165, 230, 230); */
+  min-height: 30rem;
+  /* box-shadow: 2px 3px 9px 3px ; */
+}
+
+
+/* section 1 */
+.section1 {
+  display: flex;
+  align-items: center;
+  color: rgb(184, 195, 207);
+  padding: 0 2%;
+  border-radius: 10px;
+  width: 99%;
+  background-color:  rgb(2, 24, 39);
+  box-shadow: rgb(38, 42, 46) 2px 3px 9px 3px ;
+  height: 50px;
+}
+.section1 .app-name{
+  padding-right: 50%;
+  padding-right: 1%;
+  width: 80%;
+  float: left;
+}
+.section1 .l-l{
+  padding-left: 5%;
+  display: flex;
+  width: 25%;
+}
+.l-l .user{
+  padding:  10%;
+  color: wheat;
+  font-size: 18px;
+ 
+}
+.l-l .logout{
+  padding:10%;
+  color: aqua;
+
+  
+   
+}
+
+/* .section2 */
+.section2 {
+  
+  display: inline-block;
+  padding: 0.5%;
+  border-radius: 10px;
+  width: 99%;
+  box-shadow:rgb(38, 42, 46) 2px 3px 9px 3px ;
+  background-color: rgb(168, 158, 158);
+  
+}
+.logo{
+  height:25px;
+  width:28px;
+  border-radius:3px;
+}
+
+.side-bar{
+  float: left;
+  padding: 1% 1%;
+  border-radius: 10px;
+   width: 25%;
+   min-height: 40rem;
+   background-color: rgb(2, 24, 39);
+}
+.right-bar{
+  float: right;
+  border-radius: 10px;
+  width: 75%;
+  min-height: 40rem;
+  /* background-color: rgb(235, 207, 207); */
+}
+  
+.link{
+  text-align: center;
+  border-radius: 10px;
+  color: rgb(38, 42, 46);
+  padding: 4% 0.5%;
+  width: 95%;
+  height: 50px;
+  background-color: rgb(206, 198, 198);
+
+}
+.float a{
+  padding: 1% 12%;
+  color: #000;
+}
+.float .add-task{
+  position: fixed;
+  padding: 2px;
+  margin-left: 29%;
+  margin-top:35.5%;
+  height: 30px;
+  width: 9%;
+  background-color: rgb(69, 141, 101);
+  border:solid rgb(114, 64, 207);
+  border-radius: 20px;
+  text-align: center;
+
+
+    
+}
+.float .contact{
+  padding: 2px;
+  position: fixed;
+  margin-left: 7%;
+  margin-top: 14%;
+  float: right;
+  text-align: center;
+  height: 28px;
+  width: 9%;
+  background-color: rgb(247, 242, 242);
+  border:solid rgb(114, 64, 207);
+  border-radius: 20px;
+    
+}
+.link a{
+  /* font-size: large; */
+  font-weight: bold;
+  padding:2% 30%;
+  color: rgb(48, 49, 49);
+  
+}
+
+.float .contact{
+  color: #000;
+  /* margin-left: 8%;
+  margin-top: 22%;
+  position: fixed;
+  width: 8%;
+  height: 0px;
+  padding: 1px 1PX; */
+  
+}
+
+.link:hover{
+  background-color: rgb(41, 87, 87);
+  
+}
+.catogary:hover{
+  background-color: rgb(127, 214, 214);
+
+}
+.link a:visited{
+  color: rgb(22, 20, 20);
+}
+
+.visited {
+  background-color: rgb(134, 108, 108);
+}
+
+
+/* .right-bar */
+.right-bar{
+  padding: 0.2%;
+}
+.spaces{
+  padding: 0.5%;
+  /* display: inline-block; */
+  border-radius: 10px;
+  width: 100%;
+  min-height: 40rem;
+  background-color:  rgb(2, 24, 39);
+  border: 3px solid rgb(2, 24, 39);
+}
+.spaces-name{
+  padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.spaces-name .catogary{
+  
+  padding: 1%;
+  border-radius: 20px;
+  background-color: rgb(27, 56, 56);
+}
+.catogary a{
+  padding: 5px;
+  color: rgb(248, 246, 246);
+}
+.catogary a:hover{
+  padding: 10px;
+  color: rgb(196, 151, 151);
+}
+.catogary:hover{
+  background-color: black;
+}
+.spaces-list{
+  padding: 2%;
+  
+}
+.spaces-list .spaces-item{
+  border-radius: 10px;
+  display: inline-block;
+  padding: 2%;
+  background-color: rgb(164, 182, 176);
+  width: 99%;
+}
+.spaces-item .content{
+  width: 70%;
+  float: left;
+}
+.spaces-item .control{
+  float: right;
+  font-size: 18px;
+  width: 30%;
+}
+.control a{
+  height: 30px;
+  width:60px;
+  padding: 1%;
+  color: rgb(94, 71, 71);
+  background-color: rgb(234, 234, 238);
+  border-radius: 10px;
+
+
+}
+.control button{
+  height: 30px;
+  padding: 1%;
+  width:65px;
+  border-radius: 10px;
+  color:rgb(99, 50, 50);
+  background: rgb(228, 150, 154);
+  border:none;
+  font-size:18px;
+
+}
+
+.spaces-item:hover{
+  background-color: rgb(106, 133, 133);
+  padding: 2.5%;
+}
+
+/* introduction page  */
+.main-content{
+  display:inline-block ;
+  width: 99%;
+  min-height: 30rem;
+  padding: 2% 10%;
+  border-radius: 10px;
+  background-color: rgb(235, 207, 207);
+
+}
+
+.button{
+  width: 250px;
+  padding:  10px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 9px 3px;
+  background-color: rgb(141, 141, 172);
+  height: 40px;
+}
+
+.button a{
+ 
+  padding: 10px 100px;
+}
+
+ .button:hover{
+  padding: 1% 1%;
+  background-color: rgb(112, 78, 78);
+} 
+
+.content input[type="submit"]{
+  color: wheat;
+  border: none;
+  background-color: rgb(141, 141, 172);
+}
+.content input[type="submit"]:hover{
+   background-color: rgb(112, 78, 78);
+}
+/* login page  */
+.content h1{
+  height: 70px;
+}
+.content .input-fields{
+  height: 50px;
+  
+}
+.content input[type=text]{
+  padding: 1%;
+  width: 250px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  border:solid 1px rgb(141, 126, 126);
+}
+.content input[type=password]{
+  padding: 1%;
+  width: 250px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  border:solid 1px rgb(141, 126, 126);
+
+}
+.content input[type=submit]{
+  padding: 12px;
+  width: 250px;
+  
+  font-size: 18px;
+  border-radius: 10px;
+  border:solid 1px rgb(141, 126, 126);
+
+}
+
+.form-control{
+  
+  width: 300px;
+  height: 40px;
+}
+ .btn-primary{
+  width: 100px;
+  height: 40px;
+}
+
+td {
+  padding: 12px;
+  display: inline-block;
+  border-radius: 12px;
+  min-height: 50px;
+  min-width: 250px;
+  background-color: rgb(222, 237, 238);
+}
+.controls-buttons{
+  display: flex;
+  padding: 2px;
+  float: right;
+  
+}
+
+.form-input input[type=text]{
+  width: 400px;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border:solid 1px rgb(141, 126, 126);
+
+}
+
+.form-input button[type="submit"]{
+  color: wheat;
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(54, 54, 75);
+}
+.form-input input[type="submit"]{
+  color: wheat;
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(54, 54, 75);
+}
+
+.scroll{
+  overflow-y:scroll;
+  height:460px;
+}

@@ -1,0 +1,17 @@
+<div class="spaces">
+  <div class="form-input">
+    <form action="/<%= catogary %>/add-task" method="post">
+        <p class="error"><%= (typeof error != "undefined" ? error : "") %></p>
+        <p style="color: white;">Task</p> 
+        <input type="text" name="todo" id="todo" autofocus autocomplete="off" placeholder="Task" required><br><br>
+        <p style="color: white;">Description</p> 
+        <textarea  name="desc" id="desc" rows="10" cols="50" required></textarea><br><br>
+
+       
+        
+        <button type="submit"><i class="fa-solid fa-plus"></i>&nbsp;Submit </button>
+        <a href="/spaces">Cancel</a>
+      </form>
+      
+    </div>
+</div>

@@ -1,0 +1,55 @@
+
+        <div class="spaces">
+            <div class="float"><div class="add-task"><a href="/spaces/<%= catogary %>/add-task">Add Task</a></div></div>
+
+            <div class="spaces-name">
+                <% if (space.length !== 0) { %>
+                    <% space.forEach((space) => { %>
+                  <% if (space.todo !== null) { %>
+                     <section class="catogary"><a href="/spaces/<%= space._id %>"><%= space._id %></a></section>
+                <% }  %>
+
+                <% }) %>
+                <% } else { %>
+                    <section class="catogary">no plan</a></section>
+                <% } %> 
+                <section class="catogary" style="background-color: rgb(112, 99, 99);"><a href="/spaces/add-spaces"> Add Spaces</a></section>
+                <section class="catogary" style="background-color: rgb(112, 99, 99);"><a href="/spaces/manage-spaces">Delete Spaces</a></section>
+
+                
+
+
+            </div><br>
+            <div class="spaces-list scroll">
+                <% if (spaceitem.length !== 0) { %>
+                    <% spaceitem.forEach((spaceitem) => { %>
+                  <% if (spaceitem.todo !== null) { %>
+                  <div class="spaces-item">
+                    <div class="content">
+                        
+                           <p style="color: aliceblue;"> Title: </p> <%= spaceitem.todo %> <br>
+                           <p style="color: aliceblue;"> Desc: </p><%= spaceitem.desc %>
+
+                        
+                    </div>
+                    <div class="control">
+                        <a href="/spaces/update-task/<%= spaceitem._id %>" >Update</a><br></br>
+                        <form action="/spaces-item?_method=DELETE" method="post">
+                            <input type="hidden" name="_id" value="<%= spaceitem._id %>">
+                            <button type="submit" onclick="return confirm('do you really want to delete?');" >Delete</button>
+                          </form>
+
+                    </div>
+                </div><br>
+                <% }  %>
+
+                <% }) %>
+                <% } else { %>
+                  <p style="text-align: center; margin-bottom: 5px;">No plan today.</p>
+                <% } %> 
+                
+               
+                
+            </div>
+        </div>
+
